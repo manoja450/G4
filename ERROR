@@ -1,0 +1,48 @@
+(base) [manoja450@phylogin1 ~]$ cd ~/G4neutronCapture
+rm -rf build && mkdir build && cd build
+cmake .. && make -j16 && cp coherent ..
+./coherent run.mac
+-- The C compiler identification is GNU 11.5.0
+-- The CXX compiler identification is GNU 11.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found EXPAT: /usr/lib64/libexpat.so (found suitable version "2.5.0", minimum required is "2.5.0")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found Geant4: /home/manoja450/geant4-install/lib64/cmake/Geant4/Geant4Config.cmake (found version "11.3.2")
+-- Configuring done (8.2s)
+-- Generating done (0.8s)
+-- Build files have been written to: /home/manoja450/G4neutronCapture/build
+[ 80%] Building CXX object CMakeFiles/coherent.dir/ActionInitialization.cc.o
+[ 80%] Building CXX object CMakeFiles/coherent.dir/DetectorConstruction.cc.o
+[ 80%] Building CXX object CMakeFiles/coherent.dir/main.cc.o
+[ 80%] Building CXX object CMakeFiles/coherent.dir/PhysicsList.cc.o
+[100%] Linking CXX executable coherent
+[100%] Built target coherent
+
+**************************************************************
+ Geant4 version Name: geant4-11-03-patch-02 [MT]   (25-April-2025)
+  << in Multi-threaded mode >>
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+G4PhysListFactory::GetReferencePhysList <FTFP_BERT>  EMoption= 0
+<<< Geant4 Physics List simulation engine: FTFP_BERT
+
+terminate called after throwing an instance of 'std::logic_error'
+  what():  basic_string::_M_construct null not valid
+Aborted (core dumped)
+(base) [manoja450@phylogin1 build]$
